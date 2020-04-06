@@ -13,9 +13,14 @@ public class TimeCalc {
           calculates total number of months
          */
         int month = 0;
-        while (startBalance<endBalance){
+        int balance = startBalance;
+        while (balance<endBalance){
             month++;
-            startBalance+=startBalance*0.05;
+            if (balance>1_000_000){
+                balance+=balance+99_999;
+            } else {
+                balance+=balance*0.05;
+            }
         }
         return month;
     }
