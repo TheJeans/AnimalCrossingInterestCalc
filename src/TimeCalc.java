@@ -19,7 +19,7 @@ public class TimeCalc {
             if (balance>1_000_000){
                 balance+=balance+99_999;
             } else {
-                balance+=balance*0.05;
+                balance+=balance*0.005;
             }
         }
         return month;
