@@ -16,7 +16,7 @@ public class TimeCalc {
         int balance = startBalance;
         while (balance<endBalance){
             month++;
-            if (balance>1_000_000){
+            if (balance>=1_000_000){
                 balance+=balance+99_999;
             } else {
                 balance+=balance*0.005;
